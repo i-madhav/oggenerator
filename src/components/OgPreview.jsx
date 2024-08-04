@@ -6,7 +6,7 @@ const PreviewPage = () => {
   const { title, content, image, logo } = location.state || {};
 
   const ogImageUrl = `https://og-image.vercel.app/**${encodeURIComponent(title)}**.png?theme=light&md=1&fontSize=100px&images=${encodeURIComponent(logo)}`;
-  const shareableLink = `https://yourdomain.com/preview?title=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}&image=${encodeURIComponent(image)}`;
+  const shareableLink = `https://oggenerator-woad.vercel.app/preview?title=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}&image=${encodeURIComponent(image)}`;
 
   return (
     <div className="container mx-auto p-4">

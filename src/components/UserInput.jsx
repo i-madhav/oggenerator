@@ -9,7 +9,7 @@ const UserInput = () => {
   const navigate = useNavigate();
 
   function handleData(){
-    if(!title || !content || !image || logo) return alert("Fields should not be empty");
+    if(!title || !content || !image || !logo) return alert("Fields should not be empty");
 
     navigate("/preview" , {state:{title , content , image , logo}});
   }

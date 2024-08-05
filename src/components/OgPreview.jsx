@@ -4,14 +4,9 @@ import { Helmet } from 'react-helmet';
 
 const PreviewPage = () => {
   const location = useLocation();
-  const state = location.state || {};
+  const { title, content, image, logo } = location.state || {};
 
-  const title = state.title || params.get('title') || '';
-  const content = state.content || params.get('content') || '';
-  const image = state.image || params.get('image') || '';
-  const logo = state.logo || params.get('logo') || '';
-  
-
+  // Generate the og:image URL
   const ogImageUrl = `https://og-image.vercel.app/${encodeURIComponent(title)}.png?theme=light&md=1&fontSize=100px&images=${encodeURIComponent(logo)}&content=${encodeURIComponent(content.substring(0, 100))}`;
   const shareableLink = `https://oggenerator-woad.vercel.app/preview?title=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}&image=${encodeURIComponent(image)}&logo=${encodeURIComponent(logo)}`;
 
